@@ -1,0 +1,59 @@
+\documentclass[JiaixnZhong]{CoverLetter}
+
+% use biblatex to manage references
+\usepackage{enumitem}
+\title{
+    \vspace{-1.5em}
+}
+
+%% set water mark
+% water mark file
+\newcommand{\WatermarkImage}{img/penn-state-shield.jpg}
+% % the pages where 
+\newcommand{\WatermarkPages}{1-2}
+\usepackage{xwatermark}
+\newwatermark[pages=\WatermarkPages, scale=.5, xpos=0, ypos=0]{
+    \tikz{\node[opacity=0.08]{\includegraphics{\WatermarkImage}}}
+}
+
+
+\begin{document}
+
+\date{}
+\maketitle
+
+% enable Page 1 of xx at the first page
+\thispagestyle{firststyle}
+\addcontentsline{toc}{section}{Title}
+
+\noindent
+\today
+
+\noindent
+Dear Editor,
+% \medskip
+
+We are pleased to submit our manuscript entitled ``\textbf{Your manuscript title here}'' for your consideration for publication in \emph{Journal Name}. 
+
+\lipsum[1]
+
+Highlight some points if necessary:
+\begin{itemize}[itemsep = -6pt]
+    \item Point 1
+    \item Point 2
+    \item Point 3
+\end{itemize}
+
+
+
+We believe that the novelty and broad implications of our work make it a strong fit for \emph{Journal Name}.
+
+Thank you for considering our submission. We look forward to your feedback and are happy to provide any additional information upon request.
+
+
+
+Best regards,
+
+\AuthorSignature
+
+\end{document}
