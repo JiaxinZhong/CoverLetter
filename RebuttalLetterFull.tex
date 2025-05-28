@@ -15,17 +15,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 设置水印
-% \newcommand{\WatermarkImage}{img/penn-state-shield.jpg} % 水印文件
-% \newcommand{\WatermarkPages}{1-2} % 放置的页面
-% \usepackage{xwatermark}
-% \newwatermark[pages=\WatermarkPages, scale=.5, xpos=0, ypos=0]{
-%     \tikz{\node[opacity=0.08]{\includegraphics{\WatermarkImage}}}
-% }
+\newcommand{\WatermarkImage}{img/penn-state-shield.jpg} % 水印文件
+\newcommand{\WatermarkPages}{1-2} % 放置的页面
+\usepackage{xwatermark}
+\newwatermark[pages=\WatermarkPages, scale=.5, xpos=0, ypos=0]{
+    \tikz{\node[opacity=0.08]{\includegraphics{\WatermarkImage}}}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{
-    \vspace{-3em}
-    \textbf{\Large Responses to Reviewers' Comments}
+    \vspace{2em}
+    \textbf{\Large Rebuttal Letter and Responses to Reviewers' Comments}
     \\[-.5em]
     \textit{\large Re: Manuscript ID 0000-0000-0000}
     \\[-.5em]
@@ -43,16 +43,41 @@
 \maketitle
 
 % enable Page 1 of xx at the first page
-% \thispagestyle{firststyle}
-\thispagestyle{firstbottomstyle}
+\thispagestyle{firststyle}
 \addcontentsline{toc}{section}{Title}
 
-% \noindent
-% \today
+\noindent
+\today
 
+\noindent
+Dear Editor,
+% \medskip
+
+Thank you for handling the review process of our manuscript.
+We are sincerely grateful for the comments and suggestions from you and the reviewers, which have helped us
+to improve the quality of the manuscript. We have revised the manuscript carefully according to
+the comments and suggestions, and the main changes are summarized below:
+\begin{enumerate}
+    \item Change 1.
+    \item Change 2.
+    \item Change 3.
+    \item Change 4.
+\end{enumerate}
+
+The changes are marked in \rev{red} in the revised manuscript.
+The detailed responses to reviewers' comments are appended below.
+We sincerely appreciate your further consideration of the revised manuscript.
+
+
+\lipsum[1-4]
+
+Best regards,
+
+\AuthorSignature
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 以下是正文内容
+\newpage
 \section{Comments from Editor}
 \begin{commentbox}
     \lipsum[1]

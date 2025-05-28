@@ -112,6 +112,12 @@
     }
     \fancyfoot[C]{Page {\thepage} of \pageref*{LastPage}}
 }
+% 首页没有页眉，只有页脚
+\fancypagestyle{firstbottomstyle}
+{
+    \fancyhf{}
+    \fancyfoot[C]{Page {\thepage} of \pageref*{LastPage}}
+}
 
 \usepackage{lipsum}
 
@@ -160,8 +166,10 @@
 \renewcommand{\theequation}{R\arabic{equation}}
 
 \usepackage[T1]{fontenc}
-% \usepackage{mlmodern}
-\usepackage{tgtermes}
+% \usepackage{mlmodern} % xelatex
+\usepackage{tgtermes} % pdflatex
+% \usepackage{fontspec} % 用于 XeLaTeX 或 LuaLaTeX
+% \setmainfont{TeX Gyre Termes} % 调用系统中可用的 TeX Gyre Termes 字体
 
 \usepackage{caption}
 \captionsetup[table]{skip=10pt}
