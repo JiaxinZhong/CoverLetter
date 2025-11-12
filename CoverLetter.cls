@@ -167,9 +167,10 @@
 
 \usepackage[T1]{fontenc}
 % \usepackage{mlmodern} % xelatex
-\usepackage{tgtermes} % pdflatex
+% \usepackage{tgtermes} % pdflatex
 % \usepackage{fontspec} % 用于 XeLaTeX 或 LuaLaTeX
 % \setmainfont{TeX Gyre Termes} % 调用系统中可用的 TeX Gyre Termes 字体
+\usepackage{mathptmx} % pdflatex，Times New Roman 字体
 
 \usepackage{caption}
 \captionsetup[table]{skip=10pt}
