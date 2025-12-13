@@ -172,7 +172,12 @@
 % \setmainfont{TeX Gyre Termes} % 调用系统中可用的 TeX Gyre Termes 字体
 \usepackage{mathptmx} % pdflatex，Times New Roman 字体
 
-\usepackage{caption}
+% caption 宏包用于统一设置图表标题（figure/table 的 caption）格式
+\usepackage[
+    font=small,        % 图表标题整体字号设为 \small，比正文（12pt）小一号
+    labelfont=bf,      % “Figure 1”、“Table 1” 这些标签部分用粗体
+    labelsep=period    % 标签和标题之间用句号分隔：Figure 1. Caption text
+]{caption}
 \captionsetup[table]{skip=10pt}
 
 
