@@ -165,12 +165,14 @@
 \renewcommand{\thefigure}{R\arabic{figure}}
 \renewcommand{\theequation}{R\arabic{equation}}
 
-\usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
 % \usepackage{mlmodern} % xelatex
 % \usepackage{tgtermes} % pdflatex
 % \usepackage{fontspec} % 用于 XeLaTeX 或 LuaLaTeX
 % \setmainfont{TeX Gyre Termes} % 调用系统中可用的 TeX Gyre Termes 字体
-\usepackage{mathptmx} % pdflatex，Times New Roman 字体
+% \usepackage{mathptmx} % pdflatex，Times New Roman 字体
+\usepackage{newtxtext}
+\usepackage{mlmodern}
 
 % caption 宏包用于统一设置图表标题（figure/table 的 caption）格式
 \usepackage[
