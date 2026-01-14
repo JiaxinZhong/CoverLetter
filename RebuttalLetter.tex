@@ -1,18 +1,18 @@
-% Compile with: xelatex, biblatex, xelatex, xelatex
+% Compile with: pdflatex + bibtex + pdflatex + pdflatex
 \documentclass[JiaixnZhong]{CoverLetter}
 
 % use biblatex to manage references
-\usepackage[
-    doi=false,
-    isbn=false,
-    url=false,
-    eprint=false,
-    giveninits=true,
-    date=year,
-    sorting = none,
-    style = numeric-comp
-]{biblatex}
-\addbibresource{biblatex.bib}
+% \usepackage[
+%     doi=false,
+%     isbn=false,
+%     url=false,
+%     eprint=false,
+%     giveninits=true,
+%     date=year,
+%     sorting = none,
+%     style = numeric-comp
+% ]{biblatex}
+% \addbibresource{biblatex.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Set watermark
@@ -49,9 +49,66 @@
 % \noindent
 % \today
 
+% ============================================================
+% Comment below to hide the summary of changes table
+% ============================================================
+\vspace{1em}
+We have carefully revised the manuscript and the Supplementary Materials (SM) to address all the reviewers' comments. A summary of the key changes is tabulated below:
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 以下是正文内容
+\begin{table}[htbp]
+  \centering
+  \renewcommand{\arraystretch}{1.3}
+  \caption{List of major changes in the revised manuscript and Supplementary Materials (SM).
+  Rev$i$-C$j$ denotes Comment $j$ from Reviewer $i$.
+  All changes are marked in blue in the revised manuscript and SM.
+  }
+  \vspace{-0.5em}
+  \footnotesize
+  \begin{tabular}{p{0.09\textwidth} p{0.22\textwidth} p{0.61\textwidth}}
+    \toprule
+    \textbf{Source} & \textbf{Topic of concern} & \textbf{Revision \& Location} \\
+    \midrule
+    % Reviewer 1
+    \hyperref[sec:R1C1]{Rev1-C1} & Implementation of PBCs/OBCs & \textbf{Added SM Sec.~S2.7 \& Fig.~S11} illustrating the circuit-based boundary switching. Added descriptions in the \textbf{Experimental Section}. \\
+    \hline
+    \hyperref[sec:R1C2]{Rev1-C2} & Tuning of onsite potentials & \textbf{Added descriptions in SM Sec.~S2.2} detailing the feedback tuning protocol and fitting method. \\
+    \hline
+    \hyperref[sec:R1C3]{Rev1-C3}, \hyperref[sec:R3C1]{Rev3-C1} & Photo of experimental setup & \textbf{Added Fig.~2 to manuscript} showing the final 56-cavity setup. Updated \textbf{Sec.~2.1} to reference the new figure. \\
+    \hline
+    \hyperref[sec:R1C4]{Rev1-C4}, \hyperref[sec:R1C5]{Rev1-C5} & Parameter statistics and long-term stability & \textbf{Performed long-term stability experiments (6-hour continuous test).} \textbf{Added SM Sec.~S2.5 \& Figs.~S5--S10} presenting stability data and distribution statistics. Added summary in \textbf{Sec.~2.1}. \\
+    \hline
+    \hyperref[sec:R1C6]{Rev1-C6} & Chern number calculation & \textbf{Expanded SM Sec.~S1} to include the discrete summation formula and convergence details. \\
+    \hline
+    \hyperref[sec:R1C7]{Rev1-C7} & Experimental observation of EPs & \textbf{Conducted new experiments on a pristine $4\times4$ lattice.} Measured spectral coalescence, phase rigidity dip, and line-gap closing. \textbf{Added Fig.~3} and \textbf{Sec.~2.4} to the manuscript.
+    Added \textbf{SM Sec.~S4}, \textbf{SM Sec.~S5}, and Figs.~S14--S19 for detailed analysis.
+    Revised \textbf{Abstract}.
+     \\
+    \hline
+    \hyperref[sec:R1C8]{Rev1-C8} & Device applications & \textbf{Revised Conclusion} to outline principles of NHDS-based concentrators and D-NHSE-based sensors. \\
+    \hline
+    % Reviewer 2
+    \hyperref[sec:R2C1]{Rev2-C1} & Novelty and comparison with Wu \textit{et al.} \cite{Wu2025ObservationDislocationNonHermitian} & \textbf{Added Note Added} at the end of the manuscript and clarification in \textbf{Introduction} distinguishing line-gap vs. point-gap physics. \\
+    \hline
+    \hyperref[sec:R2C2]{Rev2-C2} & Advantage of active coupling vs. circuits & \textbf{Revised Sec.~2.1} to justify the use of active meta-atoms for realizing time-reversal breaking and wave-based Hamiltonians. \\
+    \hline
+    \hyperref[sec:R2C3]{Rev2-C3} & General applicability of Green's function method & \textbf{Performed validation experiments on a passive-tube system.} \textbf{Added SM Sec.~S2.8 \& Fig.~S12} demonstrating the successful extraction of complex spectra. \\ 
+    \hline
+    % Reviewer 3
+    \hyperref[sec:R3C2]{Rev3-C2} & Amplifier details \& self-oscillation & \textbf{Added SM Sec.~S2.6} identifying audio amplifier usage. Added text to \textbf{Experimental Section} on stability verification via eigenenergy imaginary parts. \\
+    \hline
+    \hyperref[sec:R3C4]{Rev3-C4} & Spectral winding vs. D-NHSE & \textbf{Revised Introduction} (2nd para.) to clarify the distinction between point-gap and line-gap D-NHSE. \\
+    \hline
+    \hyperref[sec:R3C5]{Rev3-C5} & Raw spectral responses & \textbf{Added SM Sec.~S3 \& Fig.~S13} showing raw point-to-point Green's functions. Added descriptions in \textbf{Sec.~2.2}. \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:revision_summary}
+\end{table}
+% ============================================================
+
+
+% ============================================================ 
+% Comment from Editor
+% ============================================================ 
 \section{Comments from Editor}
 \begin{commentbox}
     \lipsum[1]
@@ -67,11 +124,10 @@
 \newpage
 \section{Comments from Reviewer 1}
 
-\subsection{General comments}
+\subsection{Comment 1\label{sec:R1C1}}
 \begin{commentbox}
     Here are the general comments from Reviewer 1.
 \end{commentbox}
-
 
 
 \subsubsection*{Responses}
@@ -86,7 +142,7 @@ Figure~\ref{fig:ex} is an example image \cite{Zhong2020SphericalExpansionAudio}.
     \label{fig:ex}
 \end{figure}
 
-\subsection{Major comment 1}
+\subsection{Comment 2\label{sec:R1C2}}
 \begin{commentbox}
     \lipsum[3]
 \end{commentbox}
@@ -123,77 +179,14 @@ Equation~(\ref{eq:ex}) is the expression.
         \midrule
         1 & $-60$                                          & $-60$         & 1 & 1.99 \\
         2 & $-43$                                          & $-49$         & 1 & 1.17 \\
-        3 & $-26$                                          & $-39$         & 1 & 1.15 \\
-        4 & $-9$                                           & $-28$         & 1 & 0.92 \\
-        5 & 9                                              & $-17$         & 1 & 0.62 \\
-        6 & 26                                             & 40            & 1 & 1.19 \\
-        7 & 43                                             & 50            & 1 & 1.73 \\
         8 & 60                                             & 60            & 1 & 1.51 \\
         \bottomrule
     \end{tabular}
 \end{table*}
 
-\subsection{Major comment 2}
-\begin{commentbox}
-    \lipsum[4]
-\end{commentbox}
-
-\subsubsection*{Responses}
-Thank you for pointing out this typo.
-We added $k_i$ in Eq.~(4) in the revised manuscript.
-
-\subsubsection*{Changes}
-Equation~(4)
-\begin{equation}
-    p_i(\bm\uprho_\mathrm{v}) =
-    \frac{p_0}{2}
-    \int_{-a}^a H_0(k_i\abs{\bm\uprho_\mathrm{v}-\bm\uprho_\mathrm{s}})
-    u_i(\bm\uprho_\mathrm{s})
-    \dd y_\mathrm{s}
-    \tag{4}
-\end{equation}
-is revised as
-\begin{equation}
-    p_i(\bm\uprho_\mathrm{v}) =
-    \frac{p_0}{2}
-    \int_{-a}^a H_0(k_i\abs{\bm\uprho_\mathrm{v}-\bm\uprho_\mathrm{s}})
-    u_i(\bm\uprho_\mathrm{s})
-    \rev{k_i}
-    \dd y_\mathrm{s}
-    \tag{4}
-\end{equation}
 
 
-\subsection{Minor comments}
-\begin{commentbox}
-    \lipsum[5]
-\end{commentbox}
-
-\subsubsection*{Responses}
-We have added descriptions for undefined symbols in the revised manuscript.
-
-\subsubsection*{Changes}
-\begin{itemize}
-    \item
-          Line 137, the descriptions
-          ``\rev{$
-                  \rho_\mathrm{s,<} = \min(\rho, \rho_\mathrm{s}),
-                  \rho_\mathrm{s,>} = \max(\rho, \rho_\mathrm{s})
-              $}''
-          is added below Eq.~(8) in the revised manuscript.
-
-    \item
-          Line 160, the descriptions
-          ``\rev{$
-                  r_\mathrm{s,<} = \min(r,r_\mathrm{s}),
-                  r_\mathrm{s,>} = \max(r,r_\mathrm{s})
-              $}''
-          is added below Eq.~(16) in the revised manuscript.
-\end{itemize}
-
-
-
-\newpage
+\clearpage
 \section{Comments from Reviewer 2}
 
 \subsection{General Comments}
@@ -213,7 +206,30 @@ Thank you for the suggestion.
 \end{itemize}
 
 
-\newpage
-\printbibliography
+\subsection{Comment 1\label{sec:R2C1}}
+\begin{commentbox}
+    \lipsum[8]
+\end{commentbox}
+\subsubsection*{Responses}
+We appreciate the comment.
+
+\subsection{Comment 2\label{sec:R2C2}}
+\begin{commentbox}
+    \lipsum[8]
+\end{commentbox}
+\subsubsection*{Responses}
+We appreciate the comment.
+
+\clearpage
+
+% for bibtex
+\bibliographystyle{unsrt}
+% bibtex.bib is the main reference file. Please add your references there.
+% bibtex_Jiaxin.bib is an additional reference file for Jiaxin Zhong's personal references.
+\bibliography{bibtex.bib, bibtex_Jiaxin.bib}
+
+% for biblatex
+% \printbibliography 
+
 \addcontentsline{toc}{section}{References}
 \end{document}

@@ -206,3 +206,7 @@
 \onehalfspacing
 
 \usepackage{enumitem}
+
+
+% Make citations appear as 2-5 instead of 2,3,4,5
+\usepackage{cite}
