@@ -212,3 +212,6 @@
 
 % Make citations appear as 2-5 instead of 2,3,4,5
 \usepackage{cite}
+
+% Support for academic icons
+\usepackage{academicons}
